@@ -43,7 +43,10 @@ public class OffreController extends HttpServlet {
         }else {
             switch (do_this){
                 case "create":
-                    //
+                    // Afficher la page addOffre.jsp pour ajouter une nouvelle offre
+                    ServletContext sc = getServletContext();
+                    RequestDispatcher rd = sc.getRequestDispatcher("/views/offre/addOffre.jsp");
+                    rd.forward(request, response);
                     break;
                 case "update":
                     //
