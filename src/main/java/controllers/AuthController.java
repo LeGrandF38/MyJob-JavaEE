@@ -10,12 +10,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 //
 //@WebServlet(name = "AuthControllerServlet", value = "/AuthController-servlet")
-@WebServlet("/AuthControllerServlet")
+@WebServlet(name = "AuthControllerServlet", value = "/AuthController-servlet")
 public class AuthController extends HttpServlet {
     private String message;
 
     public void init() {
-        message = "Hello World!";
+        message = "AuhtControllerServlet!";
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
