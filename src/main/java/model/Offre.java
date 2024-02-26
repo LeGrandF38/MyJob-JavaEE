@@ -26,6 +26,11 @@ public class Offre implements IOffre{
         this.type = type;
     }
 
+    public Offre() {
+
+    }
+
+
 
     // getteurs and setters
 

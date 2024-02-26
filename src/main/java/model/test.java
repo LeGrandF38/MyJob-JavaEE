@@ -91,7 +91,7 @@ public class test {
         //---------------------------------------------------test offres-------------------------------------------------------------
 
         // Création d'une offre
-        Offre offre = new Offre(0, 1, "2024-02-24", "2024-03-24", "Contenu de l'offre", "CDI");
+        Offre offre = new Offre(0, 1, "2024-02-00", "2024-03-00", "Contenu de l'offre 2", "CDI");
 
         // Test de création de l'offre
         int newOffreId = offre.createOffre(offre);
@@ -112,11 +112,12 @@ public class test {
 //        System.out.println("Offre supprimée avec succès.");
 
         // Test de recherche de toutes les offres
-//        List<Offre> offres = offre.findAll();
-//        System.out.println("Liste des offres :");
-//        for (Offre o : offres) {
-//            System.out.println("ID : " + o.getOffreId() + ", Contenu : " + o.getContenu() + ", Type : " + o.getType());
-//        }
+        Offre offreObject = new Offre();
+        List<Offre> offres = offreObject.findAll();
+        System.out.println("Liste des offres :");
+        for (Offre o : offres) {
+            System.out.println("ID : " + o.getOffreId() + ", Contenu : " + o.getContenu() + ", Type : " + o.getType());
+        }
     }
 
 
