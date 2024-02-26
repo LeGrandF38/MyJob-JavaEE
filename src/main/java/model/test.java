@@ -31,7 +31,7 @@ public class test {
 
         //.................................................test entreprise................................................
         // Création d'une nouvelle entreprise
-        Entreprise nouvelleEntreprise = new Entreprise(1, 1, "Nouvelle Entreprise", "Adresse de la nouvelle entreprise", "Contact de la nouvelle entreprise");
+//        Entreprise nouvelleEntreprise = new Entreprise(1, 1, "Nouvelle Entreprise", "Adresse de la nouvelle entreprise", "Contact de la nouvelle entreprise");
 //        int nouvelleEntrepriseId = nouvelleEntreprise.createEntreprise();
 //        System.out.println("ID de la nouvelle entreprise : " + nouvelleEntrepriseId);
 
@@ -60,12 +60,12 @@ public class test {
         //.........................................test Recruteur.............................................................
 
         // Création d'un recruteur de test
-        Recruteur recruteur = new Recruteur(1, "John", "Doe", "Recruteur", "john.doe@example.com", "password", "123456789", 0);
-
-        // Test de la méthode createRecruteur
-        System.out.println("Création d'un recruteur : ");
-        recruteur.createRecruteur(recruteur);
-        System.out.println("Recruteur créé avec succès.");
+//        Recruteur recruteur = new Recruteur(1, "John", "Doe", "Recruteur", "john.doe@example.com", "password", "123456789", 0);
+//
+//        // Test de la méthode createRecruteur
+//        System.out.println("Création d'un recruteur : ");
+//        recruteur.createRecruteur(recruteur);
+//        System.out.println("Recruteur créé avec succès.");
 
         // Test de la méthode updateRecruteur
 //        System.out.println("Mise à jour des informations du recruteur : ");
@@ -80,18 +80,48 @@ public class test {
 //        System.out.println("Recruteur supprimé avec succès.");
 
         // Test de la méthode findAll
-        System.out.println("Liste de tous les recruteurs : ");
-        List<Recruteur> recruteurs = recruteur.findAll();
-        for (Recruteur r : recruteurs) {
-            System.out.println("ID : " + r.getUserId() + ", Nom : " + r.getNom() + ", Prénom : " + r.getPrenom() + ", Entreprise ID : " + r.getEntrepriseId());
-            System.out.println("Mon User , son ID est : " + r.getUserId() + ", Nom : " + r.getNom() + ", Prénom : " + r.getPrenom() + ", Email : " + r.geteMail());
-            System.out.println("Mon Entreprise ID : " + r.getEntrepriseId() + ", Nom : " + r.getNom() + ", Adresse : " + r.geteMail() + ", Contact : " + r.getContact()  );
+//        System.out.println("Liste de tous les recruteurs : ");
+//        List<Recruteur> recruteurs = recruteur.findAll();
+//        for (Recruteur r : recruteurs) {
+//            System.out.println("ID : " + r.getUserId() + ", Nom : " + r.getNom() + ", Prénom : " + r.getPrenom() + ", Entreprise ID : " + r.getEntrepriseId());
+//            System.out.println("Mon User , son ID est : " + r.getUserId() + ", Nom : " + r.getNom() + ", Prénom : " + r.getPrenom() + ", Email : " + r.geteMail());
+//            System.out.println("Mon Entreprise ID : " + r.getEntrepriseId() + ", Nom : " + r.getNom() + ", Adresse : " + r.geteMail() + ", Contact : " + r.getContact()  );
+//        }
+
+        //---------------------------------------------------test offres-------------------------------------------------------------
+
+        // Création d'une offre
+        Offre offre = new Offre(0, 1, "2024-02-24", "2024-03-24", "Contenu de l'offre", "CDI");
+
+        // Test de création de l'offre
+        int newOffreId = offre.createOffre(offre);
+        if (newOffreId != -1) {
+            System.out.println("Nouvelle offre créée avec succès. ID de l'offre : " + newOffreId);
+        } else {
+            System.out.println("Échec de la création de l'offre.");
         }
+
+        // Test de mise à jour de l'offre
+//        offre.setContenu("Nouveau contenu de l'offre");
+//        offre.setType("CDD");
+//        offre.updateOffre(offre);
+//        System.out.println("Offre mise à jour avec succès.");
+
+        // Test de suppression de l'offre
+//        offre.deleteOffre(newOffreId);
+//        System.out.println("Offre supprimée avec succès.");
+
+        // Test de recherche de toutes les offres
+//        List<Offre> offres = offre.findAll();
+//        System.out.println("Liste des offres :");
+//        for (Offre o : offres) {
+//            System.out.println("ID : " + o.getOffreId() + ", Contenu : " + o.getContenu() + ", Type : " + o.getType());
+//        }
     }
 
 
 
-    }
+}
 
 
 
