@@ -3,6 +3,8 @@ package controllers;
 import java.io.*;
 
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -24,13 +26,14 @@ public class AuthController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html");
+        // Récupérer le chemin absolu du répertoire actuel
+        String servletPath = request.getServletContext().getRealPath("/");
 
-        // Hello
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
-        out.println("</body></html>");
+        // Construire le chemin complet vers le fichier index.html dans le répertoire de votre servlet
+        String indexPath = servletPath + "/template/job-board-2-master/job-board-2-master/index.html";
+
+        // Rediriger vers le fichier index.html
+        response.sendRedirect(indexPath);
     }
 
     public void destroy() {
